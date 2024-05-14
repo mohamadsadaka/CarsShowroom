@@ -1,0 +1,176 @@
+/********** Template CSS **********/
+:root {
+  --warning: #F77D0A;
+  --secondary: #2B2E4A;
+  --light: #F4F5F8;
+  --dark: #1C1E32;
+}
+
+.icon{
+    top: 30%;
+    transform: translate(-30%);
+    right: 0;
+   position: absolute;
+    
+    z-index: 99;
+    
+} .list-unstuled{
+  display: inline-block;
+  margin: 0 10px;
+    font-size: 60px;
+    color: rgb(69, 61, 61);
+    list-style: none;
+    
+   
+}
+.service-item {
+  height: 320px;
+  background: var(--light);
+  transition: .5s;
+  
+}
+.service-item .icon1 ,
+.service-item p
+{
+  z-index: 2;
+}
+
+.service-item h1,
+.service-item h4 {
+    transition: .5s;
+}
+.service-item:hover h1,
+.service-item.active h1 {
+    color: var(--dark) !important;
+    z-index: 2;
+    
+}
+.service-item:hover h4,
+.service-item.active h4 {
+    color: var(--light);
+    
+    z-index: 2;
+}
+.service-item::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary);
+  transition: 1s;
+ 
+
+  opacity: 0;
+}
+.service-item:hover::after{
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+.service-item::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--secondary);
+  transition: 1s;
+ 
+
+  opacity: 0;
+}
+.service-item:hover::before{
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  
+}
+.page-header {
+  height: 400px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url(../image/bg-banner.jpg);
+  background-attachment: fixed;
+}
+.rent-item {
+  padding: 30px;
+  text-align: center;
+  background: var(--light);
+  transition: .5s;
+}
+
+.rent-item:hover,
+.rent-item.active {
+  background: var(--secondary);
+}
+
+.rent-item h4 {
+  transition: .5s;
+}
+
+.rent-item:hover h4,
+.rent-item.active h4 {
+  color: var(--light);
+}
+
+.vendor-carousel .owl-dots,
+.testimonial-carousel .owl-dots {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vendor-carousel .owl-dot,
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--secondary);
+    transition: .5s;
+}
+
+.vendor-carousel .owl-dot.active,
+.testimonial-carousel .owl-dot.active {
+    width: 40px;
+    height: 40px;
+    background: var(--warning);
+}
+
+.testimonial-carousel .owl-item img {
+  width: 80px;
+  height: 80px;
+}
+
+.testimonial-carousel .owl-item .testimonial-item {
+  height: 350px;
+  transition: .5s;
+  background: var(--light);
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+  background: var(--secondary);
+}
+
+.testimonial-carousel .owl-item .testimonial-item h1,
+.testimonial-carousel .owl-item .testimonial-item h4 {
+  transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item h1 {
+  color: var(--dark) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item h4 {
+  color: var(--light);
+}
+
+
